@@ -1,0 +1,16 @@
+maintainer="Daniel Corbe <daniel@corbe.net>"
+pkgname=bubble-hyperv
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="Everything you need to run Bubble in hyperv"
+url="https://github.com/dcorbe"
+arch="noarch"
+license="MIT"
+depends="hvtools
+         "
+install="$pkgname.post-install"
+source=""
+
+package() {
+    mkdir -p "$pkgdir"
+}

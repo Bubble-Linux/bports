@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Enable necessary services
+
+echo "Bubble SDK setup complete. Please reboot to apply all changes."
+
+exit 0

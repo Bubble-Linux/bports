@@ -1,0 +1,18 @@
+maintainer="Daniel Corbe <daniel@corbe.net>"
+pkgname=bubble-sdk
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="The Bubble SDK"
+url="https://github.com/dcorbe"
+arch="noarch"
+license="MIT"
+depends="alpine-sdk
+         cmake
+         extra-cmake-modules
+         "
+install="$pkgname.post-install"
+source=""
+
+package() {
+    mkdir -p "$pkgdir"
+}

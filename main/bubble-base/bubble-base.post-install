@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Enable necessary services
+rc-update add udev
+
+echo "Bubble SDK setup complete. Please reboot to apply all changes."
+
+exit 0

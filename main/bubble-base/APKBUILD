@@ -1,0 +1,29 @@
+maintainer="Daniel Corbe <daniel@corbe.net>"
+pkgname=bubble-base
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="The Bubble base system"
+url="https://github.com/dcorbe"
+arch="noarch"
+license="MIT"
+depends="util-linux
+         coreutils
+         grep
+         findutils
+         bash
+         bash-completion
+         pciutils
+         usbutils
+         udisks2
+         iproute2
+         curl
+         udev
+         gcompat
+         libstdc++
+         "
+install="$pkgname.post-install"
+source=""
+
+package() {
+    mkdir -p "$pkgdir"
+}
