@@ -1,7 +1,7 @@
 maintainer="Daniel Corbe <daniel@corbe.net>"
 pkgname=bubble-desktop
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="The Bubble Development Desktop"
 url="https://github.com/dcorbe"
 arch="noarch"
@@ -15,6 +15,7 @@ depends="xorg-server
          xrdp
          autocutsel
          pulseaudio
+         xorgxrdp
          "
 makedepends=""
 install="$pkgname.post-install"
