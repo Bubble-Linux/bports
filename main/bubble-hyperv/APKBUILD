@@ -1,15 +1,16 @@
 maintainer="Daniel Corbe <daniel@corbe.net>"
 pkgname=bubble-hyperv
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Everything you need to run Bubble in hyperv"
 url="https://github.com/dcorbe"
 arch="noarch"
 license="MIT"
 depends="hvtools
-         mesa-dri-gallium 
-         mesa-vulkan-intel 
-         intel-media-driver
+         mesa-dri-gallium
+         eudev
+         xf86-input-libinput
+         xinit
          "
 install="$pkgname.post-install"
 source="modulelist"

@@ -5,6 +5,14 @@ rc-update add hv_fcopy_daemon default
 rc-update add hv_kvp_daemon default
 rc-update add hv_vss_daemon default
 
+# We will need udev on Hyper-V in order for X and Wayland to work
+rc-update add udev sysinit
+rc-update add udev-trigger sysinit
+rc-update add udev-settle sysinit
+rc-update add udev-postmount default
+rc-update add udev default
+setup-devd udev
+
 echo "Bubble hyperv setup complete. Please reboot to apply all changes."
 
 exit 0
