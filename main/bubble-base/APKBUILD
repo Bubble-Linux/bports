@@ -1,7 +1,7 @@
 maintainer="Daniel Corbe <daniel@corbe.net>"
 pkgname=bubble-base
 pkgver=1.0.0
-pkgrel=3
+pkgrel=4
 pkgdesc="The Bubble base system"
 url="https://github.com/dcorbe"
 arch="noarch"
@@ -21,7 +21,7 @@ depends="util-linux
          libstdc++
          sudo
          "
-install="$pkgname.post-install"
+install=""
 source=""
 
 package() {
