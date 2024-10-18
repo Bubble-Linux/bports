@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Enable necessary services
+rc-update add xrdp default
+rc-update add xrdp-sesman default
+
+echo "Bubble Desktop setup complete. Please reboot to apply all changes."
+
+exit 0

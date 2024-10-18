@@ -1,0 +1,34 @@
+maintainer="Daniel Corbe <daniel@corbe.net>"
+pkgname=bubble-desktop
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="The Bubble Development Desktop"
+url="https://github.com/dcorbe"
+arch="noarch"
+license="MIT"
+depends="xorg-server
+         i3wm
+         i3status
+         i3lock
+         dmenu
+         xterm
+         xrdp
+         autocutsel
+         pulseaudio
+         "
+makedepends=""
+install="$pkgname.post-install"
+source="pam startwm.sh"
+builddir="$srcdir/$pkgname-$pkgver"
+replaces="xrdp"
+
+package() {
+    mkdir -p "$pkgdir"
+    install -Dm644 "$srcdir"/pam "$pkgdir"/etc/pam.d/xrdp
+    install -Dm644 "$srcdir"/pam "$pkgdir"/etc/pam.d/xrdp-sesman
+    install -Dm755 "$srcdir"/startwm.sh "$pkgdir"/etc/xrdp/startwm.sh
+}
+sha512sums="
+ae3a807bc121eb59b54f5e53ff8efdde972610cf7463b6a38bccbc89b49954aa2e0a8693919b01f8bc7a956ba58c97de34a28963bc14f526b70b3073d64427b5  pam
+f7e6a2853ac66a55c488b494d2be54b0b0ad4f678475f411385dbf7746499e06c7922d28d6260ff48ceabf28a1925c697fcb2979974e653544dc8c250983a1e8  startwm.sh
+"
