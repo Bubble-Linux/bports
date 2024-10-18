@@ -1,13 +1,14 @@
 maintainer="Daniel Corbe <daniel@corbe.net>"
 pkgname=bubble-hyperv
 pkgver=1.0.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Everything you need to run Bubble in hyperv"
 url="https://github.com/dcorbe"
 arch="noarch"
 license="MIT"
 depends="hvtools
          mesa-dri-gallium
+         alpine-conf
          eudev
          xf86-input-libinput
          xinit
