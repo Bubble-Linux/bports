@@ -1,0 +1,5 @@
+hv_vmbus
+hv_storvsc
+hv_balloon
+hv_netvsc
+hv_utils
